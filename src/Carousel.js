@@ -10,7 +10,6 @@ class Carousel extends React.Component {
         const mySwiper = new Swiper('.swiper-container', { /* ... */ });
         return (
             <div>
-                <p>swip</p>
                 <div class="swiper-container">
                     {/* <!-- Additional required wrapper --> */}
                     <div class="swiper-wrapper">

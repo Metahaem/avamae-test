@@ -9,13 +9,16 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='title'>
-        <h1>Title</h1>
+          Title
         </div>
-        <Carousel/>
+        <div className='nav-bar-1'/>
+          <Carousel/>
         <div className='midRow'>
           <div className='watermelonBox'><Watermelon/></div>
           <div className='formBox'><Form/></div>
         </div>
+        <div className='nav-bar-2'/>
+        <div className='footer'><p>Footer</p></div>
       </div>
     );
   }

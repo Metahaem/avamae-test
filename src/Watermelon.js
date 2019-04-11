@@ -2,7 +2,8 @@ import React from 'react';
 
 const Watermelon = () => {
     return (
-        <div className='watermelon'> 
+        <div className='watermelonOverlay'> 
+            <p>Lorem ipsum dolor sit amet, tritani delenit molestie his no. Ut mei inani semper, his sale semper aliquip at. Laudem sensibus et sed. No sea munere vivendo, te reque choro cum, eum purto omnium ut.</p>
         </div>
     )
 }
