@@ -43,7 +43,7 @@ class Form extends React.Component {
             <Steptabs step={step}/><br/>
             <form onSubmit={this.handleSubmit}>
                 <div className='textBox'>
-                    <label className='box-label' for='box1'>
+                    <label className='box-label'>
                         {this.state.step === 1 ? 'First Name' : 'Telephone Number'}
                     </label>
 
@@ -57,7 +57,7 @@ class Form extends React.Component {
                 </div>
 
                 <div>
-                    <label className='box-label' for='box2'>
+                    <label className='box-label'>
                         {step === 1 ? 'Last Name' : 'Email Address'}
                     </label>  
 
