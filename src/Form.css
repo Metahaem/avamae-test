@@ -1,0 +1,65 @@
+.formBox {
+    display:flex;
+    flex:0 0 40%;
+    flex-direction: column;
+    justify-content: space-around;
+    order: 2;
+    padding: 25px;
+    max-width:500px;
+    background-color: #F5F5F5;
+  }
+
+    .steptabs {
+      display:flex;
+      order: 1;
+      width: 100%;
+    }
+
+        .steptab {
+            width:60px;
+            height:20px;
+            background-color: #F1F1F1;
+            border: 1px solid #ccc;
+            color: black;
+            border-radius: 4px;
+            padding-top: 8px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+    .box-label {
+      font-size: 10px;
+    }
+
+    input[type=text], textarea {
+      width: 100%;
+      height: 13px;
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      background-color: #F1F1F1;
+      resize: none;
+      -webkit-transition-duration: 0.5s; 
+      transition-duration: 0.5s;
+    }
+
+      input[type=text]:focus {
+        border: 3px solid  #008CBA;
+      }
+
+    .button {
+     
+      background-color: #439757;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px 34px;
+      font-weight: bold;
+      -webkit-transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+
+    }
+
+      .button:hover {
+        background-color: #008CBA;
+      }

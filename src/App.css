@@ -5,139 +5,49 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
+  height:100vh;
 }
 
-.title{
-    font-size: 20px;
-}
+  .title{
+      font-size: 20px;
+  }
 
-
+/* Middle row, containing watermelon box and form */
   .midRow {
-    flex: 0 0 60%;
-    max-width: 800px;
+    flex: 0 0 40%;
+    max-width: 700px;
     order: 4;
     display:flex;
     flex-wrap:wrap;
-    flex-basis: 70%;
+    align-self: center;
     padding: 50px;
     justify-content: space-around;
   }
-  
-    .watermelonBox {
-      flex: 0 0 50%;
-      order: 1;
-      display:flex;
-      align-items: flex-end;
-      flex-basis: 40%;
-      background-image: url(./img/bg.jpg);
-      background-size: 100% 100%;
-    }
 
-    .watermelonOverlay {
-      flex-basis: 100%;
-      background-color:rgba(2, 12, 6, 0.7);
-      color: white;
-      font-size: 11px;
-      line-height: 16px;
-      padding: 15px;
-      /* bottom:0px; */
-    }
-
-    .formBox {
-      display:flex;
-      flex:0 0 50%;
-      flex-direction: column;
-      justify-content: space-around;
-      order: 2;
-      padding: 50px;
-      flex-basis: 40%;
-      background-color: #F5F5F5;
-    }
-
-      .steptab {
-        flex:1;
-        order:1;
-        padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0
-      }
-
-      .box-label {
-        text-align: left;
-        padding-bottom: 30px;
-        font-size: 11px;
-      }
-
-      input[type=text], textarea {
-        flex:1;
-        width: 100%;
-        height: 10px;
-        padding: 7px;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-        background-color: #F1F1F1;
-        resize: vertical;
-        -webkit-transition-duration: 0.5s; 
-        transition-duration: 0.5s;
-      }
-
-        input[type=text]:focus {
-          border: 3px solid  #008CBA;
-        }
-
-      .button {
-        flex:1;
-        align-self: flex-end;
-        background-color: #439757;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
-        padding: 10px 34px;
-        font-weight: bold;
-        -webkit-transition-duration: 0.4s; 
-        transition-duration: 0.4s;
-      }
-
-        .button:hover {
-          background-color: #008CBA;
-        }
-
-
-
-/* swiper */
-
-.swiper-container {
-  flex: 0 0 15%;
-  flex-basis: 600px;
-  height: 300px;
-  order: 2;
-}
-
-.swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.nav-bar-1 {
-  border-bottom: 2px solid #F5F5F5;
-  order: 3;
-}
-
-.nav-bar-2 {
-  border-bottom: 2px solid #F5F5F5;
-  order: 5;
-}
+/* Other elements */
 
 .footer {
   order: 6;
-  font-weight: normal;
   text-align: center;
 }
+
+.divider-1 {
+  order: 3;
+  width:100%;
+  height:100px;
+  padding: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.904);
+}
+
+.divider-2 {
+  order: 5;
+  width:100%;
+  height:100px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.904);
+}
+
+
+
+
+
+

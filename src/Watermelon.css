@@ -1,0 +1,19 @@
+    .watermelonBox {
+        flex: 0 0 40%;
+        order: 1;
+        display:flex;
+        align-items: flex-end;
+        background-image: url(./img/bg.jpg);
+        background-size: 100% 100%;
+        max-width:500px;
+      }
+  
+        .watermelonOverlay {
+          flex-basis: 100%;
+          background-color:rgba(2, 12, 6, 0.7);
+          color: white;
+          font-size: 11px;
+          line-height: 16px;
+          padding: 15px;
+        }
+  

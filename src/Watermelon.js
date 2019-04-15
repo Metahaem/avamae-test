@@ -1,4 +1,5 @@
 import React from 'react';
+import './Watermelon.css'
 
 const Watermelon = () => {
     return (

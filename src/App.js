@@ -11,13 +11,15 @@ class App extends Component {
         <div className='title'>
           Title
         </div>
-        <div className='nav-bar-1'/>
+        <div className='divider-1'/>
+        <div> 
           <Carousel/>
+        </div>
         <div className='midRow'>
           <div className='watermelonBox'><Watermelon/></div>
           <div className='formBox'><Form/></div>
         </div>
-        <div className='nav-bar-2'/>
+        <div className='divider-2'/>
         <div className='footer'><p>Footer</p></div>
       </div>
     );

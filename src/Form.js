@@ -1,5 +1,6 @@
 import React from 'react';
 import Steptabs from './Steptabs'
+import './Form.css';
 
 class Form extends React.Component {
     state = {
@@ -7,8 +8,14 @@ class Form extends React.Component {
         lastName: '',
         telephoneNumber: '',
         emailAddress: '',
-        step: 1
+        step: 1,
+        styles1: {
+            backgroundColor: '#C1EAFA',
+            border: '1px solid rgb(113, 166, 187)'
+        },
+        styles2: {}
     };
+
 
     // Called each time a character is typed or deleted
     handleChange = (event) => {
@@ -21,7 +28,23 @@ class Form extends React.Component {
     // Will go to the next input field or submit the form, depending on which step of the form submission you are at  
     handleNext = (event) => {
         event.preventDefault();
-        this.state.step === 1 ? this.setState({step: 2}) : this.submitForm()
+        if ((this.state.step === 2 && (this.state.telephoneNumber.length === 0 || this.state.emailAddress.length===0)) || this.state.firstName.length === 0 || this.state.lastName.length === 0) {
+            alert('Make sure all boxes are complete!')
+        }
+        else {
+            this.state.step === 1 ? this.nextStep() : this.submitForm()
+        } 
+    }
+
+    nextStep = () => {
+        this.setState({
+            step: 2,
+            styles1: {}, 
+            styles2: {
+                backgroundColor: '#C1EAFA',
+                border: '1px solid rgb(113, 166, 187)'
+            },
+        })
     }
 
     // Lets user know they have submitted the form, and clears data from form
@@ -32,46 +55,52 @@ class Form extends React.Component {
             lastName: '',
             telephoneNumber: '',
             emailAddress: '',
-            step: 1
+            step: 1,
+            styles1: {
+                backgroundColor: '#C1EAFA',
+                border: '1px solid rgb(113, 166, 187)'
+            },
+            styles2: {}
         })
     }
 
     render() {
-        const {step, firstName, lastName, telephoneNumber, emailAddress} = this.state
+        const {step, styles1, styles2, firstName, lastName, telephoneNumber, emailAddress} = this.state
+
         return (
             <div>
-            <Steptabs step={step}/><br/>
-            <form onSubmit={this.handleSubmit}>
-                <div className='textBox'>
-                    <label className='box-label'>
-                        {this.state.step === 1 ? 'First Name' : 'Telephone Number'}
-                    </label>
+                <Steptabs styles1={styles1} styles2={styles2} /><br/>
+                <form onSubmit={this.handleSubmit}>
+                    <div className='textBox'>
+                        <label className='box-label'>
+                            {step === 1 ? 'First Name' : 'Telephone Number'}
+                        </label>
 
-                    <textarea 
-                        id='box1'
-                        type='text'
-                        name={step === 1 ? 'firstName' : 'telephoneNumber'}
-                        value={step === 1 ? firstName : telephoneNumber} 
-                        onChange={this.handleChange} 
-                    /> 
-                </div>
+                        <textarea 
+                            id='box1'
+                            type='text'
+                            name={step === 1 ? 'firstName' : 'telephoneNumber'}
+                            value={step === 1 ? firstName : telephoneNumber} 
+                            onChange={this.handleChange} 
+                        /> 
+                    </div>
 
-                <div>
-                    <label className='box-label'>
-                        {step === 1 ? 'Last Name' : 'Email Address'}
-                    </label>  
+                    <div>
+                        <label className='box-label'>
+                            {step === 1 ? 'Last Name' : 'Email Address'}
+                        </label>  
 
-                    <textarea 
-                        id='box2'
-                        type='text'
-                        name={step === 1 ? 'lastName' : 'emailAddress'}
-                        value={step === 1 ? lastName : emailAddress} 
-                        onChange={this.handleChange} 
-                    />
-                </div>
+                        <textarea 
+                            id='box2'
+                            type='text'
+                            name={step === 1 ? 'lastName' : 'emailAddress'}
+                            value={step === 1 ? lastName : emailAddress} 
+                            onChange={this.handleChange} 
+                        />
+                    </div>
 
-                <input className='button' type='submit' value={step===1? 'Next' : 'Submit'} onClick={this.handleNext}/>
-            </form>
+                    <input className='button' type='submit' value={step===1? 'Next' : 'Submit'} onClick={this.handleNext}/>
+                </form>
             </div>
         )
     }
